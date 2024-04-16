@@ -6,7 +6,7 @@ import SearchBar from './components/SearchBar';
 import Nav from './components/Nav'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import BrowserRouter as Router
 import WatchList from './components/WatchList';
-
+import NotFound from './components/NotFound';
 function App() {
   return (
     <div className="App">
@@ -22,6 +22,7 @@ function App() {
               <Routes>
                 <Route path='/' element={<SearchBar />} />
                 <Route path='/watchlist' element={<WatchList />} />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             
           </div>
