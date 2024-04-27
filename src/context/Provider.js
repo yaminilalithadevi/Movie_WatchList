@@ -46,6 +46,7 @@ const Provider = ({ children }) => {
   };
 
   const removeFromWatchList = (movieIndex) => {
+    console.log(movieIndex)
     const updatedList = [...list];
     updatedList.splice(movieIndex, 1);
     setList(updatedList);
@@ -53,7 +54,7 @@ const Provider = ({ children }) => {
   };
 
   const getWatchList = () => {
-    if (!user) {
+    if (!user) { 
       return;
     }
     const storedList = localStorage.getItem(user);
@@ -79,18 +80,19 @@ const Provider = ({ children }) => {
     signOut,
     addWatchList,
     getWatchList,
-    removeFromWatchList
+    removeFromWatchList 
   };
 
-  return <Context.Provider value={myValue}>{children}</Context.Provider>;
+  return  <Context.Provider value={myValue}>{children}</Context.Provider>;
 };
 
-export const useMyContext = () => {
-  const context = useContext(Context);
-  if (!context) {
-    throw new Error("useMyContext must be used inside MyProvider");
-  }
+ 
+  export const useMyContext = () => {
+     const context = useContext(Context);
+        if (!context) {
+           throw new Error("useMyContext must be used inside MyProvider");
+         }
   return context;
-};
+ };
 
 export default Provider;

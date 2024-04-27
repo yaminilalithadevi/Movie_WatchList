@@ -15,6 +15,7 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
+    console.log(user)
     if (!user) {
       setShowModal(!showModal);
     } else {

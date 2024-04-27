@@ -9,6 +9,7 @@ function WatchList() {
 
 
   console.log("all lists",list)
+  console.log("removeFromWatchList",removeFromWatchList)
   useEffect(() => {
     getWatchList();
   }, [user]);

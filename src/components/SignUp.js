@@ -5,7 +5,8 @@ import { useState } from "react";
 const SignUp = ({showModal, setShowModal}) => {
 
   const [email, setEmail] = useState("");
-  const { signIn } = useMyContext();
+  
+  const {  signIn } = useMyContext();
 
   const handleCloseModal = () => {
     setShowModal();
@@ -24,7 +25,7 @@ const SignUp = ({showModal, setShowModal}) => {
 
   return (
     <div>
-      <Modal show={showModal} onHide={handleCloseModal}>
+      <Modal show={showModal} onHide={handleCloseModal}   >
         <Modal.Header closeButton>
           <Modal.Title style={{ color: "#FF204E" }}>Sign Up</Modal.Title>
         </Modal.Header>
