@@ -10,7 +10,7 @@ import SignUp from "./SignUp";
 
 const Sidebar = () => {
   const [showModal, setShowModal] = useState(false);
-  const [email, setEmail] = useState("");
+  
   const { user, signOut, list,WatchListName } = useMyContext();
   const navigate = useNavigate();
 

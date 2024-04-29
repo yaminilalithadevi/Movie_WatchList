@@ -46,7 +46,7 @@ const Provider = ({ children }) => {
   };
 
   const removeFromWatchList = (movieIndex) => {
-    console.log(movieIndex)
+    
     const updatedList = [...list];
     updatedList.splice(movieIndex, 1);
     setList(updatedList);

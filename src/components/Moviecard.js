@@ -10,7 +10,7 @@ const MovieCard = ({ movie, index }) => {
   
   const [showModal, setShowModal] = useState(false);
 
-  const isMarked = list.some((item) => item.imdbID === movie.imdbID && item.mark);
+  const isMarked = list.some((item) => item.imdbID === movie.imdbID );
 
 
   const handleWatchList = (movie) => {
@@ -25,6 +25,7 @@ const MovieCard = ({ movie, index }) => {
     }
   };
 
+ 
   useEffect(() => {
     getWatchList();
   }, [user]);

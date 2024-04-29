@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react';
 //import { BsSearch } from 'react-icons/bs';
 import { BsBookmarkPlusFill } from "react-icons/bs";
 import MovieCard from './Moviecard';
-import { useMyContext } from '../context/Provider';
-//import SearchIcon from './SearchIcon.svg';
+
+
 
 const SearchBar = () => {
-  const { signIn } = useMyContext();
+  
 
 const API_URL = 'https://www.omdbapi.com/?i=tt3896198&apikey=58c58a31'
   const [movies, setMovies] = useState([]);
