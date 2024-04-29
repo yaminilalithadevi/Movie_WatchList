@@ -9,7 +9,7 @@ import MovieCard from './Moviecard';
 const SearchBar = () => {
   
 
-const API_URL = 'https://www.omdbapi.com/?i=tt3896198&apikey=58c58a31'
+const API_URL = 'https://www.omdbapi.com/?i=tt3896198&apikey=6ed9229a'
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
     const searchMovies = async (title) => {
